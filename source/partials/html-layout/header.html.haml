@@ -1,0 +1,15 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %title Web Starter Kit
+    = partial 'partials/html-layout/meta'
+
+    %title
+      = current_page.data.title
+
+    = stylesheet_link_tag "style"
+
+    - if yield_content :page_stylesheet
+      = yield_content :page_stylesheet
+    
+    = javascript_include_tag "libs/modernizr"

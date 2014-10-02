@@ -1,0 +1,12 @@
+= partial 'partials/html-layout/header'
+
+%body{:class=>page_classes}
+
+  = partial 'partials/global_header'
+
+  %div#content{:role=>'main'}
+    = yield
+
+  = partial 'partials/global_footer'
+
+  = partial 'partials/html-layout/footer'
